@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abacus Example Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Abacus Example Generator</h1>
+
+        <div class="mode-selection input-section">
+            <label>Select Abacus Mode:</label>
+            <button id="lowerBeadsModeBtn" class="mode-btn active">Lower Beads (0-4)</button>
+            <button id="unitRodModeBtn" class="mode-btn">+5 - 5 (Full Unit Rod)</button>
+            <button id="friendsOf5ModeBtn" class="mode-btn">Friends of 5</button>
+            <button id="friendsOf10ModeBtn" class="mode-btn">Friends of 10</button>
+            <button id="tensRodLowerBeadsModeBtn" class="mode-btn">Tens Rod (10-40)</button>
+            <button id="fullTensRodModeBtn" class="mode-btn">Full Tens Rod (0-90)</button>
+            <button id="friendsOf50ModeBtn" class="mode-btn">Friends of 50</button>
+            <button id="friendsOf100ModeBtn" class="mode-btn">Friends of 100</button> </div>
+
+        <div class="input-section">
+            <label for="numExamples">Number of Sequences to Generate:</label>
+            <input type="number" id="numExamples" min="1" value="3">
+
+            <label for="operationsPerSequence">Operations per Sequence:</label>
+            <input type="number" id="operationsPerSequence" min="1" value="12">
+            <p class="hint">(Sequences aim for this length, but may be shorter if valid moves run out.)</p>
+
+            <button id="generateBtn">Generate Examples</button>
+            <button id="clearBtn">Clear Examples</button>
+        </div>
+
+        <div id="output" class="output-section">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
